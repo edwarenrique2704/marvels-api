@@ -1,0 +1,22 @@
+<div class="text-center">
+
+    <h1 class="titulo"><img src="../assets/imagenes/logomarvel.png" width="250" height="80" alt=""> {{title}}</h1>
+
+</div>
+<div class="img">
+
+    <img src="../assets/imagenes/vengadores.jpg " class="img-fluid img-thumbnail mt-5" width="100%">
+</div>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-4">
+    <div class="col mb-4" *ngFor="let character of characters |async">
+        <div class="card h-100 bg-dark text-white text-center p-3">
+            <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" class="card-img-top"
+                alt="{{character.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{character.name}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
